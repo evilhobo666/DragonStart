@@ -82,8 +82,8 @@ public class Dragon
     }
     public void dragonSpeech(Graphics g)
     {
-        g.drawRect(x, y - 40, size * 40, size * 8);
-        g.drawString(textBox, x + 1, y  + size - 30);
+        g.drawRect(x, y - 40, size * 35, size * 8);
+        g.drawString(textBox, x + 1, y + size - 30);
     }
     
     /**
