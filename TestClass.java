@@ -22,6 +22,7 @@ public class TestClass
        System.out.println(jen);
        
        Dragon David = new Dragon(250, 250, 2, Color.RED, "Water", "Hello There!");
+       David.dragonSpeech(g);
        David.dragonElement(g);
        David.drawDragon(g);
        

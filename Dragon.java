@@ -13,6 +13,7 @@ public class Dragon
     private int size;
     private Color c;
     private String attackType;
+    private String textBox;
     
 
     /**
@@ -81,9 +82,8 @@ public class Dragon
     }
     public void dragonSpeech(Graphics g)
     {
-        g.drawRect(x, y - 70, size * 30, size * 30);
-        g.drawString(textBox, x, y -70);
-        
+        g.drawRect(x, y - 40, size * 40, size * 8);
+        g.drawString(textBox, x + 1, y  + size - 30);
     }
     
     /**
