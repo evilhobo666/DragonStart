@@ -1,4 +1,6 @@
 import java.awt.*;
+import java.util.Scanner;
+import java.awt.Font;
 /**
  * Write a description of class Dragon here.
  *
@@ -11,6 +13,9 @@ public class Dragon
     private int x;
     private int y;
     private int size;
+    private int R;
+    private int G;
+    private int B;
     private Color c;
     private String attackType;
     private String textBox;
@@ -25,7 +30,10 @@ public class Dragon
         x = 50;
         y = 50;
         size = 1;
-        c = Color.BLUE; 
+        R = 0;
+        G = 0;
+        B = 0;
+        
         attackType = "Fire";
         textBox = "Hello";
     }
@@ -34,11 +42,13 @@ public class Dragon
     /**
      * Overloaded Constructors go here
      */
-    public Dragon(int x,int y, int size, Color c, String attackType, String textBox){
+    public Dragon(int x,int y, int size, int R ,int G, int B, String attackType, String textBox){
         this.x = x;
         this.y = y;
         this.size = size;
-        this.c = c; 
+        this.R = R;
+        this.G = G;
+        this.B = B;
         this.attackType = attackType;
         this.textBox = textBox;
     }
@@ -50,7 +60,8 @@ public class Dragon
      */
     public void drawDragon(Graphics g)
     {
-        g.setColor(c); 
+        Color userColor = new Color(R,G,B);
+        g.setColor(userColor); 
         g.fillRect(x, y , size * 25, size * 25); //Draw Head
         g.fillRect(x+size * 25, y + size*25, size *60, size * 50); //Draw Body
         g.fillRect(x+size * 25, (y + size*25) + size * 50, size * 10, size * 30); //Draw Leg #1
@@ -82,6 +93,7 @@ public class Dragon
     }
     public void dragonSpeech(Graphics g)
     {
+        g.setFont(new Font("ComicSans", Font.PLAIN, 12)); 
         g.drawRect(x, y - 40, size * 35, size * 8);
         g.drawString(textBox, x + 1, y + size - 30);
     }
@@ -94,6 +106,6 @@ public class Dragon
      * toString
      */
     public String toString(){
-        return "x coor: " + x + " y coord: " + y + " size: " + size + " Color: " + c;
+        return "x coor: " + x + " y coord: " + y + " size: " + size + " Color: " + R  + G  + B;
     }
 }
