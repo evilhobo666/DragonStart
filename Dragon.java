@@ -19,6 +19,7 @@ public class Dragon
     private Color c;
     private String attackType;
     private String textBox;
+    private Font myFont;
     
 
     /**
@@ -36,13 +37,14 @@ public class Dragon
         
         attackType = "Fire";
         textBox = "Hello";
+        Font myFont = new Font("TimesRoman", Font.PLAIN, 12);
     }
     
    
     /**
      * Overloaded Constructors go here
      */
-    public Dragon(int x,int y, int size, int R ,int G, int B, String attackType, String textBox){
+    public Dragon(int x,int y, int size, int R ,int G, int B, String attackType, String textBox, Font myFont){
         this.x = x;
         this.y = y;
         this.size = size;
@@ -51,6 +53,7 @@ public class Dragon
         this.B = B;
         this.attackType = attackType;
         this.textBox = textBox;
+        this.myFont = myFont;
     }
      /** Accessor Methods
      */

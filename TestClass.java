@@ -20,6 +20,7 @@ public class TestClass
        R = scnr.nextInt();
        G = scnr.nextInt();
        B = scnr.nextInt();
+       Font myFont = new Font("ComicSans", Font.PLAIN, 12);
        
        
        
@@ -32,7 +33,7 @@ public class TestClass
        
        System.out.println(jen);
        
-       Dragon David = new Dragon(250, 250, 2, R, G, B, "Water", "Hello There!");
+       Dragon David = new Dragon(250, 250, 2, R, G, B, "Water", "Hello There!",);
        David.dragonSpeech(g);
        David.dragonElement(g);
        David.drawDragon(g);
