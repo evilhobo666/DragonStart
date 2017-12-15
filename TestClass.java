@@ -10,7 +10,9 @@ import java.awt.Font;
 public class TestClass
 {
    public static void main(String args[]){
-       DrawingPanel panel = new DrawingPanel(500,500);
+       int width = 500;
+       int height = 500;
+       DrawingPanel panel = new DrawingPanel(width,height);
        Graphics g = panel.getGraphics();
        int R;
        int G; 
@@ -23,7 +25,7 @@ public class TestClass
        Font myFont = new Font("ComicSans", Font.PLAIN, 12);
        
        
-       
+       Scene jen = new Scene(width,height);
        
        Dragon jen = new Dragon();
        jen.dragonSpeech(g);
@@ -33,7 +35,7 @@ public class TestClass
        
        System.out.println(jen);
        
-       Dragon David = new Dragon(250, 250, 2, R, G, B, "Water", "Hello There!",);
+       Dragon David = new Dragon(250, 250, 2, R, G, B, "Water", "Hello There!");
        David.dragonSpeech(g);
        David.dragonElement(g);
        David.drawDragon(g);
