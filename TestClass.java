@@ -25,15 +25,16 @@ public class TestClass
        Font myFont = new Font("ComicSans", Font.PLAIN, 12);
        
        
-       Scene jen = new Scene(width,height);
+       Scene main = new Scene();
+       main.drawScene(g);
        
-       Dragon jen = new Dragon();
-       jen.dragonSpeech(g);
-       jen.dragonElement(g);
-       jen.drawDragon(g);
+       Dragon Balerion = new Dragon();
+       Balerion.dragonSpeech(g);
+       Balerion.dragonElement(g);
+       Balerion.drawDragon(g);
        
        
-       System.out.println(jen);
+       System.out.println(Balerion);
        
        Dragon David = new Dragon(250, 250, 2, R, G, B, "Water", "Hello There!");
        David.dragonSpeech(g);

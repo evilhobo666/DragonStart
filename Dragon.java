@@ -44,7 +44,7 @@ public class Dragon
     /**
      * Overloaded Constructors go here
      */
-    public Dragon(int x,int y, int size, int R ,int G, int B, String attackType, String textBox, Font myFont){
+    public Dragon(int x,int y, int size, int R ,int G, int B, String attackType, String textBox){
         this.x = x;
         this.y = y;
         this.size = size;

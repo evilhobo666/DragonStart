@@ -1,4 +1,4 @@
-
+import java.awt.*;
 /**
  * Write a description of class Scene here.
  *
@@ -10,41 +10,46 @@ public class Scene
     // instance variables - replace the example below with your own
     private int width;
     private int height;
-    private Color horizonColor;
-    private Color groundColor;
-    private Color sunColor;
+    private Color HC;
+    private Color GC;
+    private Color SC;
     
 
     /**
      * Constructor for objects of class Scene
      */
-    public Scene(int width, int height)
+    public Scene()
+    {
+        // initialise instance variables
+        width = 500;
+        height = 500;
+        HC = Color.CYAN;
+        GC = Color.GREEN;
+        SC = Color.YELLOW;
+    }
+    public Scene(int width, int height, Color HC,Color GC, Color SC)
     {
         // initialise instance variables
         this.width = width;
         this.height = height;
-        horizonColor = Color.CYAN;
-        groundColor = Color.GREEN;
-        sunColor = Color.YELLOW;
+        this.HC = HC;
+        this.GC = GC;
+        this.SC = SC;
     }
-
     /**
      * An example of a method - replace this comment with your own
      *
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public Scene(int w, int h, Color HC, Color GC, Color SC)
+    public void drawScene(Graphics g)
     {
         // put your code here
-        Color HorizontalC = new Color(HC);
-        g.setColor(HorizontalC);
-        g.fillRect(0,0,w,h);
-        Color GroundC = new Color(GC);
-        g.setColor(GroundC);
-        g.fillRect(0,600,w,h);
-        Color SunC = new Color(SC);
-        g.setColor(SunC);
-        g.fillCircle(600,0,w,h);
+        g.setColor(HC);
+        g.fillRect(0,0,width,height);
+        g.setColor(GC);
+        g.fillRect(0,height -200,width,height - 150);        
+        g.setColor(SC);
+        g.fillOval(width - 200,0,width - 400,height - 400);
     }
 }
