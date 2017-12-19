@@ -29,7 +29,6 @@ public class TestClass
        main.drawScene(g);
        
        Dragon Balerion = new Dragon();
-       Balerion.dragonSpeech(g);
        Balerion.dragonElement(g);
        Balerion.drawDragon(g);
        
