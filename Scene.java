@@ -50,6 +50,6 @@ public class Scene
         g.setColor(GC);
         g.fillRect(0,height -200,width,height - 150);        
         g.setColor(SC);
-        g.fillOval(width - 200,0,width - 400,height - 400);
+        g.fillOval(width - 100,0,width - 400,height - 400);
     }
 }

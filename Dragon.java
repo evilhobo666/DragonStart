@@ -97,7 +97,6 @@ public class Dragon
     public void dragonSpeech(Graphics g)
     {
         g.setFont(new Font("ComicSans", Font.PLAIN, 12)); 
-        g.drawRect(x, y - 40, size * 35, size * 8);
         g.drawString(textBox, x + 1, y + size - 30);
     }
     
