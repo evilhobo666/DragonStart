@@ -23,7 +23,6 @@ public class TestClass
        R = scnr.nextInt();
        G = scnr.nextInt();
        B = scnr.nextInt();
-       
        Font myFont = new Font("ComicSans", Font.PLAIN, 12);
        ArrayList<Dragon> dragons = new ArrayList<Dragon>();
        
@@ -43,7 +42,7 @@ public class TestClass
        //create the dragons
        for(int i = 1; i <= num; i++){
            
-           Dragon temp = new Dragon(90*i +25, 30*i + 25, 1*i, 25 * i, , B + 10, "Fire", "Hello There!");
+           Dragon temp = new Dragon(50*i +25, 50*i + 25, 1*i, R + i*40, G + i*15, B + i*20,"Fire", "Hello There!");
            dragons.add(temp);
            
        }
