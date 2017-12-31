@@ -42,7 +42,7 @@ public class TestClass
        //create the dragons
        for(int i = 1; i <= num; i++){
            
-           Dragon temp = new Dragon(50*i +25, 50*i + 25, 1*i, R + i*40, G + i*15, B + i*20,"Fire", "Hello There!");
+           Dragon temp = new Dragon(50*i +25, 50*i + 25, 1*i, R + i*10, G + i*5, B + i*7,"Fire", "Hello There!");
            dragons.add(temp);
            
        }
