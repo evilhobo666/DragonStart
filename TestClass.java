@@ -18,11 +18,15 @@ public class TestClass
        int R;
        int G; 
        int B;
+       String dragonText;
        Scanner scnr = new Scanner(System.in);
        System.out.println("Type in RGB Numbers");
        R = scnr.nextInt();
        G = scnr.nextInt();
        B = scnr.nextInt();
+       System.out.println("What do you want the dragon to say?");
+       dragonText = scnr.next();
+       
        Font myFont = new Font("ComicSans", Font.PLAIN, 12);
        ArrayList<Dragon> dragons = new ArrayList<Dragon>();
        
@@ -42,7 +46,7 @@ public class TestClass
        //create the dragons
        for(int i = 1; i <= num; i++){
            
-           Dragon temp = new Dragon(50*i +25, 50*i + 25, 1*i, R + i*10, G + i*5, B + i*7,"Fire", "Hello There!");
+           Dragon temp = new Dragon(50*i +25, 50*i + 25, 1*i, R + i*10, G + i*5, B + i*7,"Fire", dragonText);
            dragons.add(temp);
            
        }
