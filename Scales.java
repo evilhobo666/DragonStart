@@ -40,3 +40,5 @@ public class Scales extends Dragon
         drawScales(g);
     }
 }
+
+/*hellyah
